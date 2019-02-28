@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         <Cabecera miau={miau} manejaClick={this.manejaClick} />
-        <P>
+        <P onClick={this.cambiarTextoDelEstado}>
         {miau}
         </P>
       </div>
