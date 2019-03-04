@@ -3,13 +3,11 @@ import P from './P';
 
 const validate = values => {
   const errors = {};
-  if(!values.nombre)
-  {
-      errors.nombre = 'Este campo es obligatorio';
+  if (!values.nombre) {
+    errors.nombre = 'Este campo es obligatorio';
   }
-  if(!values.apellido)
-  {
-      errors.apellido = 'Este campo es obligatorio';
+  if (!values.apellido) {
+    errors.apellido = 'Este campo es obligatorio';
   }
   return errors;
 };
@@ -27,13 +25,11 @@ export default class FormularioSimple extends Component {
     const {errors, ...sinErrors} = this.state;
     const result = validate (sinErrors);
     this.setState ({errors: result});
-    if (!Object.keys(result).length)
-    {
-        //enviar el formulario
-        console.log('formulario valido')
-        e.target.reset();
+    if (!Object.keys (result).length) {
+      //enviar el formulario
+      console.log ('formulario valido');
+      e.target.reset ();
     }
-  
   };
   render () {
     const {errors} = this.state;
