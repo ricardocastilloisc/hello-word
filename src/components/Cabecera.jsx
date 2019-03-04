@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import logo from '../logo.svg';
+import H1 from './H1';
 
 const styles = {
   header: ({backgroundColor}) => ({
@@ -39,9 +40,9 @@ export default class Cabecera extends Component {
           className="App-logo"
           alt="logo"
         />
-        <h1 onClick={this.manejaClick} className="App-title">
+        <H1 onClick={this.manejaClick}>
           {miau}
-        </h1>
+        </H1>
       </header>
     );
   }
